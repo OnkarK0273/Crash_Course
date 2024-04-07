@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <H1>Smart phone list</H1>
+    <button id="btn" >click here to make API call</button>
+    <div id="box">
+
+    </div>
+</body>
+</html>
+<script>
+
+    const btn = document.querySelector("#btn")
+    let data = []
+    btn.addEventListener("click",()=>{
+        console.log("click")
+        handleAPI()
+    })
+
+    async function handleAPI(){
+        try{
+            let res = await fetch("https://dummyjson.com/products/")
+            let bucket = await res.json()
+            data = bucket.products
+            console.log(data)
+            dispaly(data)
+        }catch(err){
+            console.log(err)
+        }
+    }
+
+    function dispaly(data){
+       
+        let div = document.querySelector("#box")
+        div.innerHTML = ''
+        data.map((el,i)=>{
+            let text = document.createElement("p")
+            text.innerText = `${i+1} ${el.title}`
+            console.log(el.title)
+            div.append(text)
+        })
+    }
+
+
+</script>
