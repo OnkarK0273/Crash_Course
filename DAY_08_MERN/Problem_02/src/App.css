@@ -1,0 +1,24 @@
+.dark{
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap:"30px";
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.light{
+  color: #242424;
+  background-color:rgba(255, 255, 255, 0.87);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap:"30px";
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
