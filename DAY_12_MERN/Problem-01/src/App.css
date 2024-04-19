@@ -1,0 +1,28 @@
+.nav-box{
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(15, 232, 224);
+}
+.nav-right{
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.img-pointer{
+  cursor: pointer;
+}
+
+.light {
+  background-color: rgba(255, 255, 255, 0.87);
+  color: #242424;
+  height: 100vh;
+}
+
+.dark {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  height: 100vh;
+}
